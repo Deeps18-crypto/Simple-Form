@@ -1,0 +1,17 @@
+.form {
+  width: 70vw;
+}
+.form__button > Button {
+  margin-top: 20px;
+  margin-left: 290px;
+  background: lightgray;
+}
+.form__button > Button:hover {
+  background: grey;
+}
+
+.form__para {
+  margin-left: 290px;
+  color: red;
+  margin-top: -4px;
+}

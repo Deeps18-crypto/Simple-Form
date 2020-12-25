@@ -1,0 +1,24 @@
+.header {
+  display: flex;
+  background: lightgray;
+  width: 35vw;
+  margin-left: 30px;
+  border-radius: 10px;
+  height: 10vh;
+}
+.header__link1 {
+  text-decoration: none !important;
+  margin-right: 50px;
+  margin-left: 350px;
+}
+.header__link2 {
+  text-decoration: none !important;
+  margin-right: 50px;
+}
+.header__head {
+  font-size: 20px;
+  color: black;
+}
+.header__head:hover {
+  color: lightyellow;
+}

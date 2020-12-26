@@ -14,7 +14,6 @@ function Tabel() {
         "https://simple-form-17f62-default-rtdb.firebaseio.com/data.json"
       );
 
-      console.log(request.data);
       let fetchdata = [];
       for (let key in request.data) {
         fetchdata.push({ ...request.data[key], id: key });
@@ -25,7 +24,6 @@ function Tabel() {
     }
     fetchData();
   }, []);
-  console.log(datas);
 
   let data = (
     <table className="table__table">

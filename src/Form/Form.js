@@ -6,9 +6,11 @@ import { useFormik } from "formik";
 import "./Form.css";
 import axios from "axios";
 import Spinner from "../Spinner";
+import {useHistory} from "react-router-dom"
 
 function Form() {
   const [loading, setloading] = useState(false);
+  const history = useHistory()
   const style = {
     root: {
       width: "50%",
@@ -51,11 +53,6 @@ function Form() {
     validate,
     onSubmit: (inputdata) => {
       setloading(true);
-      let arr = Object.keys(inputdata);
-      let fetchdata = arr.map((key) => {
-        return { [key]: inputdata[key] };
-      });
-      console.log(arr);
       axios
         .post(
           "https://simple-form-17f62-default-rtdb.firebaseio.com/data.json",
@@ -63,18 +60,17 @@ function Form() {
         )
         .then((response) => {
           setloading(false);
-          console.log(response);
+          history.push("/table")
         });
-      // db.collection("post").add({
-      //   fetchdata,
-      // });
-
-      console.table(inputdata);
     },
   });
 
   let load = (
-    <form autoComplete="off" onSubmit={formik.handleSubmit} className="form__form">
+    <form
+      autoComplete="off"
+      onSubmit={formik.handleSubmit}
+      className="form__form"
+    >
       <TextField
         label="Name"
         variant="outlined"

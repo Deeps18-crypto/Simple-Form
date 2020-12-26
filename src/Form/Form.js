@@ -6,11 +6,11 @@ import { useFormik } from "formik";
 import "./Form.css";
 import axios from "axios";
 import Spinner from "../Spinner";
-import {useHistory} from "react-router-dom"
+import { useHistory } from "react-router-dom";
 
 function Form() {
   const [loading, setloading] = useState(false);
-  const history = useHistory()
+  const history = useHistory();
   const style = {
     root: {
       width: "50%",
@@ -60,7 +60,7 @@ function Form() {
         )
         .then((response) => {
           setloading(false);
-          history.push("/table")
+          history.push("/table");
         });
     },
   });
@@ -96,7 +96,6 @@ function Form() {
       {formik.touched.email && formik.errors.email && (
         <p className="form__para">{formik.errors.email}</p>
       )}
-
       <TextField
         label="Phone"
         variant="outlined"

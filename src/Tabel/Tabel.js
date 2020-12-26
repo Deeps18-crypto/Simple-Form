@@ -28,7 +28,7 @@ function Tabel() {
   console.log(datas);
 
   let data = (
-    <table>
+    <table className="table__table">
       <tr>
         <th>Name</th>
         <th>Email</th>

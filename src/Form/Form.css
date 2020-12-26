@@ -1,17 +1,23 @@
 .form {
-  width: 70vw;
+  margin-top: 20px;
 }
+.form__form {
+  width: 70%;
+  margin-left: auto;
+}
+
 .form__button > Button {
   margin-top: 20px;
-  margin-left: 290px;
   background: lightgray;
+  margin-left: 15px;
 }
 .form__button > Button:hover {
   background: grey;
 }
 
 .form__para {
-  margin-left: 290px;
+  margin-left: 15px;
   color: red;
-  margin-top: -4px;
+  margin-top: -1px;
+  font-size: 14px;
 }

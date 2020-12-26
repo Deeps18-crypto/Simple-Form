@@ -8,16 +8,17 @@ import Header from "./Header";
 function App() {
   return (
     <div className="app">
-      <h1>Simple Form</h1>
-      <Router>
-        <Header />
-        <Route path="/table">
-          <Tabel />
-        </Route>
-        <Route exact path="/">
-          <Form />
-        </Route>
-      </Router>
+      <div className="app__body">
+        <Router>
+          <Header />
+          <Route path="/table">
+            <Tabel />
+          </Route>
+          <Route exact path="/">
+            <Form />
+          </Route>
+        </Router>
+      </div>
     </div>
   );
 }

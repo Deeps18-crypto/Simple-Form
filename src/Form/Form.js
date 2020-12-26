@@ -12,7 +12,7 @@ function Form() {
   const style = {
     root: {
       width: "50%",
-      marginLeft: "18em",
+      marginLeft: "1em",
       marginTop: "1em",
     },
   };
@@ -74,7 +74,7 @@ function Form() {
   });
 
   let load = (
-    <form autoComplete="off" onSubmit={formik.handleSubmit}>
+    <form autoComplete="off" onSubmit={formik.handleSubmit} className="form__form">
       <TextField
         label="Name"
         variant="outlined"
